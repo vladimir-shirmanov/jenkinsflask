@@ -3,9 +3,9 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh cd flask-app/
-                sh pip install pipenv
-                sh pipenv install
+                bat 'cd flask-app/'
+                bat 'pip install pipenv'
+                bat 'pipenv install'
             }
         }
         stage('Test') { 
